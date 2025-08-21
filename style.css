@@ -28,7 +28,7 @@ body {
     padding: 16px 21px 18px 21px;
     background-image: url(bacground-fofo.png);
     background-size: contain;
-    height: 100vh;
+    height: 200vh;
     flex-direction: column;
 }
 
