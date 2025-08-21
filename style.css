@@ -1,87 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-:root {
-    --cor-destaque: #ED145B;
-    --cor-gradiente-preto: linear-gradient(113deg, #000 0%, #1E2021 44.96%, #1E2022 100%);
+@font-face {
+  font-family: thalia;
+  src: url(starborn/Starborn.ttf) format('truetype');
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Montserrat;
+@font-face {
+  font-family: tyson;
+  src: url(vogue/Vogue.ttf) format('truetype');
 }
 
+/* Fundo gradiente azul e roxo */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 21px 18px 21px;
-    background: var(--cor-gradiente-preto);
-    height: 100vh;
-    flex-direction: column;
+  background: linear-gradient(135deg,#D3B6B2 0%, #7F909E 100%);
+  font-family: 'Lato', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
-.container {
-    display: flex;
-    width: 65rem;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    overflow: hidden;
+.painel {
+  background: rgba(192, 223, 250, 0.95);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(#434E1A), 0 2px 4px #95AD4C;
+  padding: 44px 34px 36px 34px;
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 30px;
 }
 
 h1 {
-    color: var(--cor-destaque);
-    text-align: center;
-    font-size: 2.8rem;
-    font-weight: 600;
-    text-transform: uppercase;
+  color: #4e54c8;
+  font-size: 2.1rem;
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-shadow: 1px 1px 0 #fff, 0 2px 8px #8f94fb66;
 }
 
-#entrada-de-texto {
-    display: flex;
-    height: 12rem;
-    padding: 1.4rem 2.5rem 2.5rem 2.5rem;
-    align-items: flex-start;
-    gap: 0.625rem;
-    align-self: stretch;
-    border-radius: 0.625rem;
-    background: #FFF;
-    font-size: 2rem;
+#campo-input {
+  resize: vertical;
+  min-height: 8rem;
+  max-height: 19rem;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #8f94fb;
+  background: #f7f9fc;
+  color: #2e3451;
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 6px #8f94fb11;
+}
+#campo-input::placeholder {
+  color: #9fa8da;
 }
 
-#entrada-de-texto::placeholder {
-    color: #828282;
-    font-size: 2rem;
-    font-weight: 400;
-    line-height: normal;
+#botao-separar {
+  background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.18rem;
+  font-weight: 700;
+  padding: 13px 0;
+  transition: background 0.3s;
+  box-shadow: 0 2px 6px #4e54c822;
+  cursor: pointer;
 }
 
-#botao-palavrachave {
-    display: flex;
-    padding: 1.25rem;
-    justify-content: center;
-    align-items: center;
-    gap: 0.625rem;
-    border-radius: 0.5rem;
-    border: none;
-    background: var(--cor-destaque);
-    color: #000;
-    font-size: 2.5rem;
-    font-weight: 500;
-    line-height: normal;
+#botao-separar:hover {
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
 }
 
-#resultado-palavrachave {
-    display: flex;
-    border-radius: 0.625rem;
-    align-self: stretch;
-    color: var(--cor-destaque);
-    font-size: 2.5rem;
-    justify-content: center;
-    margin-bottom: 2rem;
-    max-width: 100%;
-    max-height: 50vh;
-    overflow: auto;
+#area-lista {
+  border-radius: 7px;
+  min-height: 38px;
+  padding: 10px;
+  background: #eef2fb;
+  color: #6d6ad5;
+  font-size: 1.16rem;
+  text-align: center;
+  box-shadow: 0 1px 4px #8f94fb0c;
+  margin-top: 8px;
+  word-break: break-word;
 }
