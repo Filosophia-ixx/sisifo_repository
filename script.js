@@ -1,15 +1,16 @@
-const botaoSeparar = document.querySelector("#botao-separar");
+const botaoMostraPalavras = document.querySelector('#botao-palavrachave');
 
-botaoSeparar.addEventListener("click", gerarSeparacao);
+botaoMostraPalavras.addEventListener('click', mostraPalavrasChave);
 
-function gerarSeparacao() {
-  const textoBruto = document.querySelector("#campo-input").value;
-  const campoLista = document.querySelector("#area-lista");
-  const listaPalavras = criarListaDePalavras(textoBruto);
-  campoLista.textContent = listaPalavras.join(" · ");
+function mostraPalavrasChave() {
+    const texto = document.querySelector('#entrada-de-texto').value;
+    const campoResultado = document.querySelector('#resultado-palavrachave');
+    const palavrasChave = processaTexto(texto);
+
+    campoResultado.textContent = palavrasChave.join(", ");
 }
 
-function criarListaDePalavras(texto) {
-  // Divide usando RegExp e filtra resultados vazios
-  return texto.split(/\P{L}+/u).filter(word => word.length > 0);
+function processaTexto(texto) {
+    let palavras = texto.split(/\P{L}+/u);
+    return palavras;
 }
